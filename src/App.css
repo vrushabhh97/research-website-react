@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+/* App.css */
+body {
+  margin: 0;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 24px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar ul li a:hover {
+  color: #ab89d5;
+}
+
+.main {
+  margin-top: 60px; /* To avoid content being hidden under the fixed navbar */
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.icon-links {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center align the icons */
+  margin-top: 15px; /* Add spacing above the icons */
+  margin-bottom: 15px;
+}
+
+.icon-link {
+  margin: 0 10px; /* Add spacing between icons */
+  display: inline-block; /* Ensure each icon is treated as a block for better spacing */
+}
+
+.icon {
+  width: 40px; /* Set a specific width */
+  height: 40px; /* Set a specific height */
+  transition: transform 0.3s ease; /* Add a transition effect for hover */
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Code block styling */
+.code-block {
+  margin: 50px;
+  background-color: #f5f5f5; /* Light gray background */
+  color: #333333;            /* Dark text color */
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto; /* Horizontal scrolling */
+  max-height: 300px; /* Limit height to make it scrollable */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for aesthetics */
+  text-align: left; /* Ensure left alignment */
+}
+
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap; /* Allows wrapping if necessary */
+  text-align: left; /* Ensure left alignment */
+}
+
+.code-block code {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #000000; /* Black text color */
+  font-size: 1rem;
+  text-align: left; /* Ensure left alignment */
+}
+
+
+.author-link {
+  margin-left: 30px; /* Adjust the spacing as needed */
+}
