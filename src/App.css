@@ -3,8 +3,9 @@
 /* App.css */
 body {
   margin: 0;
-  font-family: "Afacad Flux", sans-serif;
+  font-family: "Assistant", sans-serif;
   font-size: 24px;
+  font-weight: lighter;
 }
 
 .navbar {
@@ -98,4 +99,26 @@ body {
 
 .author-link {
   margin-left: 30px; /* Adjust the spacing as needed */
+}
+
+.abstract-content{
+  padding-left: 150px;
+  padding-right: 150px;
+  text-align: justify;
+}
+
+.overview_img {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.title {
+  padding-left: 150px;
+  padding-right: 150px;
+  font-weight: lighter;
+}
+
+.image-desc {
+  text-align: justify;
+  font-size: small;
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import github from './assets/github.svg';
 import pdf from './assets/pdf.svg';
+import EgoVideo from './assets/AI_Team_Compiled_Video.mp4'
+import { ABSTRACT, OVERVIEW } from './constants';
 
 const App = () => {
   return (
@@ -13,7 +15,7 @@ const App = () => {
             <li><a href="#about">About</a></li>
             <li><a href="#abstract">Abstract</a></li>
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#demo">Demo</a></li>
+            <li><a href="#results">Results</a></li>
             <li><a href="#acknowledgement">Acknowledgement</a></li>
             <li><a href="#citations">Citations</a></li>
           </ul>
@@ -23,19 +25,8 @@ const App = () => {
       {/* Main Content */}
       <main>
       <section id="about" className="section">
-  <h2>Project Name</h2>
-  
-  {/* Research Paper Title */}
-  <h3>Research Paper Title</h3>
-  
-  {/* Author names as links */}
-  <p>
-    <a href="https://www.scu.edu/imaginarium/" target="_blank" rel="noopener noreferrer">Author 1</a>
-    <a href="https://www.scu.edu/imaginarium/" target="_blank" rel="noopener noreferrer" className="author-link">Author 2</a>
-    <a href="https://www.scu.edu/imaginarium/" target="_blank" rel="noopener noreferrer" className="author-link">Author 3</a>
-    <a href="https://www.scu.edu/imaginarium/" target="_blank" rel="noopener noreferrer" className="author-link">Author 4</a>
-    <a href="https://www.scu.edu/imaginarium/" target="_blank" rel="noopener noreferrer" className="author-link">Author 5</a>
-</p>
+  <h2 className="title">Fish2Mesh Transformer:</h2>
+  <h2 className="title">3D Human Mesh Reconstruction from Egocentric Vision</h2>
 
   
   {/* Institution */}
@@ -51,53 +42,59 @@ const App = () => {
             </a>
           </div>
           <div className="video-container">
-    <iframe
-      width="900" // You can adjust the width
-      height="500" // You can adjust the height
-      src="https://www.youtube.com/embed/RQjtT0-1ySI?si=wkCS7oTNhGp0PN0L" // Replace YOUR_VIDEO_ID with the actual ID
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
+          <iframe
+            width="1130" // You can adjust the width
+            height="600" // You can adjust the height
+            src={EgoVideo}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
 </section>
 
 
         <section id="abstract" className="section">
-          <h2>Abstract</h2>
-          <p>Research Paper Abstract</p>
+          <h2 className="title">Abstract</h2>
+          <p className="abstract-content">{ABSTRACT}</p>
         </section>
 
         <section id="overview" className="section">
-          <h2>Overview</h2>
-          <p>Overview of the project</p>
+          <h2 className="title">Overview</h2>
+          <div className="overview_img" >
+          <img
+          src="Fish2Mesh.png" 
+          alt="Overview Illustration" 
+          style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
+          />
+          <img
+          src="patch.png" 
+          alt="Patch" 
+          style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
+          />
+          </div>
+          <p>{OVERVIEW}</p>
         </section>
 
-        <section id="demo" className="section">
-          <h2>Demo</h2>
-          <p>Demo Videos</p>
-            {/* YouTube Video Embed */}
-  <div className="video-container">
-    <iframe
-      width="900" // You can adjust the width
-      height="500" // You can adjust the height
-      src="https://www.youtube.com/embed/RQjtT0-1ySI?si=wkCS7oTNhGp0PN0L" // Replace YOUR_VIDEO_ID with the actual ID
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
+        <section id="results" className="section">
+          <h2 className="title">Results</h2>
+          <div className="overview_img" >
+          <img
+          src="visual.jpg" 
+          alt="Visual" 
+          style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
+          />
+          <p className="image-desc">The all models' visual results of four examples from the four datasets. FishVIT is the pose estimation model, thus we shift the joints to obviously observe the visual results. The red is the ground truth and the blue is the results of related models. The third-person view is not used as input for the model; it is provided only to help us better understand the environment and human pose to compare the results.</p>
+          </div>
         </section>
 
         <section id="acknowledgement" className="section">
-          <h2>Acknowledgement</h2>
+          <h2 className="title">Acknowledgement</h2>
           <p>Acknowledging contributions and collaborators</p>
         </section>
 
         <section id="citations" className="section">
-          <h2>Citation</h2>
+          <h2 className="title">Citation</h2>
           <div className="code-block">
             <pre>
               <code>
