@@ -62,14 +62,8 @@ const App = () => {
               alt="Overview Illustration"
               style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
             />
-            <p className="overview-content">{OVERVIEW_DETAIL}</p>
-            {/* <img
-              src="patch.png"
-              alt="Patch"
-              style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
-            /> */}
           </div>
-          <p>{OVERVIEW}</p>
+          <p className="abstract-content">{OVERVIEW_DETAIL}</p>
         </section>
 
         <section id="results" className="section">
@@ -80,8 +74,8 @@ const App = () => {
               alt="Visual"
               style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
             />
-            <p className="abstract-content">{RESULTS_DETAIL}</p>
           </div>
+          <p className="abstract-content">{RESULTS_DETAIL}</p>
         </section>
 
         <section id="acknowledgement" className="section">

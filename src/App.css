@@ -114,8 +114,11 @@ body {
 }
 
 .overview_img {
-  padding-left: 150px;
-  padding-right: 150px;
+  width: 100%;
+  height: auto;
+  max-width: 1130px; /* Matches the width of the video */
+  margin: 0 auto 10px; /* Centers the image and adds bottom margin */
+  display: block; /* Centers the image */
 }
 
 .title {
