@@ -38,13 +38,15 @@ const App = () => {
           </div>
 
           {/* Video Embed */}
-          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+          <div className="video-container" style={{ maxWidth: '1130px', margin: '0 auto' }}>
             <iframe
+              width="1130"
+              height="600"
               src="https://player.vimeo.com/video/1025654876?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
               title="AI_Team_Compiled_Video"
+              allowFullScreen
             ></iframe>
           </div>
         </section>
