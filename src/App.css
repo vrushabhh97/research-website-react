@@ -107,6 +107,12 @@ body {
   text-align: justify;
 }
 
+.overview-content {
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: justify;
+}
+
 .overview_img {
   padding-left: 150px;
   padding-right: 150px;
