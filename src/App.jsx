@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import github from './assets/github.svg';
 import pdf from './assets/pdf.svg';
-import EgoVideo from './assets/AI_Team_Compiled_Video.mp4'
 import { ABSTRACT, OVERVIEW, OVERVIEW_DETAIL, RESULTS_DETAIL } from './constants';
 
 const App = () => {
@@ -37,14 +36,15 @@ const App = () => {
               <img src={github} alt="GitHub Icon" className="icon" />
             </a>
           </div>
-          <div className="video-container">
+
+          {/* Video Embed */}
+          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
             <iframe
-              width="1130" // You can adjust the width
-              height="600" // You can adjust the height
-              src={EgoVideo}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              src="https://player.vimeo.com/video/1025654876?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+              title="AI_Team_Compiled_Video"
             ></iframe>
           </div>
         </section>
