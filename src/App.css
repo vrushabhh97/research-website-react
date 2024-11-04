@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
-
 /* App.css */
 body {
   margin: 0;
   font-family: "Assistant", sans-serif;
   font-size: 24px;
+  font-weight: lighter;
+}
+
+.title {
+  font-size: 3rem;  /* Increased for visibility during debugging */
+  font-family: "Assistant", sans-serif;
+  color: black;      /* Pure black for high contrast */
+  text-align: center;
+  padding: 20px;  
   font-weight: lighter;
 }
 
@@ -17,7 +24,24 @@ body {
   z-index: 1000;
 }
 
-.navbar ul {
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-button {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -25,109 +49,121 @@ body {
   padding: 0;
 }
 
-.navbar ul li {
+.nav-links li {
   margin: 0 20px;
 }
 
-.navbar ul li a {
-  color: white;
+.nav-links li a {
+  color: black;
   text-decoration: none;
   font-size: 20px;
 }
 
-.navbar ul li a:hover {
+.nav-links li a:hover {
   color: #ab89d5;
 }
 
-.main {
-  margin-top: 60px; /* To avoid content being hidden under the fixed navbar */
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    color: black;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
 }
 
-.section {
-  padding: 50px 20px;
-  text-align: center;
+.video-container {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
 }
 
 .icon-links {
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center align the icons */
-  margin-top: 15px; /* Add spacing above the icons */
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
 .icon-link {
-  margin: 0 10px; /* Add spacing between icons */
-  display: inline-block; /* Ensure each icon is treated as a block for better spacing */
+  margin: 0 10px;
+  display: inline-block;
 }
 
 .icon {
-  width: 40px; /* Set a specific width */
-  height: 40px; /* Set a specific height */
-  transition: transform 0.3s ease; /* Add a transition effect for hover */
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
 }
 
 .icon:hover {
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  transform: scale(1.1);
 }
 
-/* Code block styling */
-.code-block {
-  margin: 50px;
-  background-color: #f5f5f5; /* Light gray background */
-  color: #333333;            /* Dark text color */
-  padding: 15px;
-  border-radius: 8px;
-  overflow-x: auto; /* Horizontal scrolling */
-  max-height: 300px; /* Limit height to make it scrollable */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for aesthetics */
-  text-align: left; /* Ensure left alignment */
+main {
+  margin-top: 80px; /* Adjust to ensure content is not overlapped by navbar */
 }
 
-.code-block pre {
-  margin: 0;
-  white-space: pre-wrap; /* Allows wrapping if necessary */
-  text-align: left; /* Ensure left alignment */
+.section {
+  padding: 50px 20px;
 }
 
-.code-block code {
-  font-family: 'Courier New', Courier, monospace; /* Monospace font */
-  color: #000000; /* Black text color */
-  font-size: 1rem;
-  text-align: left; /* Ensure left alignment */
-}
+/* Add debug styles to .title */
 
 
-.author-link {
-  margin-left: 30px; /* Adjust the spacing as needed */
-}
 
-.abstract-content{
-  padding-left: 150px;
-  padding-right: 150px;
-  text-align: justify;
-}
-
-.overview-content {
-  padding-left: 100px;
-  padding-right: 100px;
+.abstract-content, .overview-content {
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: justify;
 }
 
 .overview_img {
   width: 100%;
-  height: auto;
-  max-width: 1130px; /* Matches the width of the video */
-  margin: 0 auto 10px; /* Centers the image and adds bottom margin */
-  display: block; /* Centers the image */
+  max-width: 1130px;
+  margin: 0 auto;
+  display: block;
 }
 
-.title {
-  padding-left: 150px;
-  padding-right: 150px;
-  font-weight: lighter;
-}
+@media (max-width: 480px) {
+  .nav-links li a {
+    font-size: 18px;
+  }
 
-.image-desc {
-  text-align: justify;
-  font-size: small;
+  .abstract-content, .overview-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section {
+    padding: 20px 10px;
+  }
+
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
 }

@@ -1,5 +1,7 @@
+// App.jsx
 import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
 import github from './assets/github.svg';
 import pdf from './assets/pdf.svg';
 import { ABSTRACT, OVERVIEW, OVERVIEW_DETAIL, RESULTS_DETAIL } from './constants';
@@ -8,18 +10,7 @@ const App = () => {
   return (
     <div className="App">
       {/* Navbar */}
-      <header className="navbar">
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#abstract">Abstract</a></li>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#results">Results</a></li>
-            <li><a href="#acknowledgement">Acknowledgement</a></li>
-            <li><a href="#citations">Citations</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
 
       {/* Main Content */}
       <main>
@@ -40,7 +31,7 @@ const App = () => {
           {/* Video Embed */}
           <div className="video-container" style={{ maxWidth: '1130px', margin: '0 auto' }}>
             <iframe
-              width="1130"
+              width="100%"
               height="600"
               src="https://player.vimeo.com/video/1025654876?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
               frameBorder="0"
